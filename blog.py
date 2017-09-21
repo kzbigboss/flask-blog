@@ -25,7 +25,7 @@ def connect_db():
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != app.config['USERNAME'] or request.form['password'] != app.config['PASSOWRD']:
+        if request.form['username'] != app.config['USERNAME'] or request.form['password'] != app.config['PASSWORD']:
             error = 'Invalid credentials.  Try again.'
         else:
             session['logged in'] = True
