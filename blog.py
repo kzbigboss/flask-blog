@@ -40,7 +40,7 @@ def login():
         if request.form['username'] != app.config['USERNAME'] or request.form['password'] != app.config['PASSWORD']:
             error = 'Invalid credentials.  Try again.'
         else:
-            session['logged in'] = True
+            session['logged_in'] = True
             return redirect(url_for('main'))
     return render_template('login.html', error=error)
 
